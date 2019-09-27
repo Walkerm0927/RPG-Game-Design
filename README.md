@@ -1,4 +1,3 @@
-# class_demo
-Class demo of unity combined with sourcetree
+# Greg - professional goblin exterminator
 
-We have created a repository and are about to commit some changes
+This is the game of group 5 for game design class
