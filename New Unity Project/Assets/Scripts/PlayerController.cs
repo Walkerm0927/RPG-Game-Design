@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float reload_time_longrange;
     public float reload_time_dash;
     public float footstep_speed = 2;
-    private float time_since_footstep = 0;
+    public float time_since_footstep = 0;
 
     private Rigidbody2D rigidbody;
     private AudioSource footstep;
@@ -30,8 +30,9 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector2(xpos, ypos);
         if (Input.GetAxis("Horizontal")!=0||Input.GetAxis("Vertical")!=0)
         {
+            if (time_since_footstep==0) { footstep.Play(); }
             time_since_footstep += Time.deltaTime;
-            if (time_since_footstep==2.0) { footstep.Play(); }
+            if (time_since_footstep>=footstep_speed) { footstep.Play(); time_since_footstep = 0; }
         } else { time_since_footstep = 0; }
     }
 }

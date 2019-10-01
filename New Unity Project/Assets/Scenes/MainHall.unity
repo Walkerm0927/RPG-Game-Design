@@ -236,7 +236,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256342328}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 776547540}
   - component: {fileID: 776547539}
   m_Layer: 0
-  m_Name: Output 1-2
+  m_Name: Soundtrack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 862429751}
   - component: {fileID: 862429754}
   m_Layer: 9
-  m_Name: greg_front_sprite_rogue (1)
+  m_Name: Greg_front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -560,6 +560,7 @@ MonoBehaviour:
   reload_time_longrange: 0
   reload_time_dash: 0
   footstep_speed: 2
+  time_since_footstep: 2
 --- !u!61 &862429752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -618,10 +619,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fbbaf5b46f3a4434bad9bc84a4e59f67, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
