@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
+    public float reload_time_shortrange;
+    public float reload_time_longrange;
+    public float reload_time_dash;
+
     private Rigidbody2D rigidbody;
 
     // Start is called before the first frame update
