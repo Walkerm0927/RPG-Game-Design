@@ -268,7 +268,17 @@ PrefabInstance:
     - target: {fileID: 2369756258828509357, guid: de1df62359e2b044d9b2e58a098db339,
         type: 3}
       propertyPath: m_Name
-      value: goblin_front
+      value: goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369756258828509357, guid: de1df62359e2b044d9b2e58a098db339,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369756258828509357, guid: de1df62359e2b044d9b2e58a098db339,
+        type: 3}
+      propertyPath: m_TagString
+      value: goblin
       objectReference: {fileID: 0}
     - target: {fileID: 2369756258828509359, guid: de1df62359e2b044d9b2e58a098db339,
         type: 3}
@@ -323,6 +333,21 @@ PrefabInstance:
     - target: {fileID: 2369756258828509359, guid: de1df62359e2b044d9b2e58a098db339,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369756258828509358, guid: de1df62359e2b044d9b2e58a098db339,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369756258828509358, guid: de1df62359e2b044d9b2e58a098db339,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369756258828509358, guid: de1df62359e2b044d9b2e58a098db339,
+        type: 3}
+      propertyPath: m_AutoTiling
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

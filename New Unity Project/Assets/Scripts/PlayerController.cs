@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public float reload_time_dash;
     public float footstep_speed = 2;
     public float time_since_footstep = 0;
+    public Text score_reg;
+    private int score;
 
     private Rigidbody2D rigidbody;
     private AudioSource footstep;
@@ -34,5 +36,21 @@ public class PlayerController : MonoBehaviour
             time_since_footstep += Time.deltaTime;
             if (time_since_footstep>=footstep_speed) { footstep.Play(); time_since_footstep = 0; }
         } else { time_since_footstep = 0; }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("goblin"))
+        {
+            other.gameObject.SetActive(false); // do not destroy
+            score += 1;
+            print(score);
+            setScore();
+        }
+    }
+
+    private void setScore()
+    {
+        score_reg.text = score.ToString();
     }
 }
