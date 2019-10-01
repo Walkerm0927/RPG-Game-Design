@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         footstep = GetComponent<AudioSource>();
+        score = 0;
     }
 
     // Update is called once per frame
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("goblin"))
         {
-            other.gameObject.SetActive(false); // do not destroy
+            other.gameObject.SetActive(false);
             score += 1;
             print(score);
             setScore();
