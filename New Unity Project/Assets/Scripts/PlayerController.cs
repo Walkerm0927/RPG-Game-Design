@@ -28,8 +28,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xpos = transform.position.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        float ypos = transform.position.y + Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+        float xpos = transform.position.x + h * speed * Time.deltaTime;
+        float ypos = transform.position.y + v * speed * Time.deltaTime;
         transform.position = new Vector2(xpos, ypos);
         if (Input.GetAxis("Horizontal")!=0||Input.GetAxis("Vertical")!=0)
         {
