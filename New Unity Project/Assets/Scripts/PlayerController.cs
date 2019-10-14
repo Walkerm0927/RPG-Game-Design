@@ -16,12 +16,13 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rigidbody;
     private AudioSource footstep;
-
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         footstep = GetComponent<AudioSource>();
+        animator = this.GetComponent<Animator>();
         score = 0;
     }
 
@@ -30,15 +31,21 @@ public class PlayerController : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+
+        animator.SetInteger("horizontal", (int)h);
+        animator.SetInteger("vertical", (int)v);
+
         float xpos = transform.position.x + h * speed * Time.deltaTime;
         float ypos = transform.position.y + v * speed * Time.deltaTime;
         transform.position = new Vector2(xpos, ypos);
-        if (Input.GetAxis("Horizontal")!=0||Input.GetAxis("Vertical")!=0)
+        if (h == 0 && v == 0)
         {
+            time_since_footstep = 0;
+        } else {
             if (time_since_footstep==0) { footstep.Play(); }
             time_since_footstep += Time.deltaTime;
             if (time_since_footstep>=footstep_speed) { footstep.Play(); time_since_footstep = 0; }
-        } else { time_since_footstep = 0; }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
