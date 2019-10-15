@@ -1,8 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class PlayerController : MonoBehaviour
 {
     public float speed;
@@ -10,28 +10,56 @@ public class PlayerController : MonoBehaviour
     public float reload_time_longrange;
     public float reload_time_dash;
     public float footstep_speed = 2;
-    private float time_since_footstep = 0;
+    public float time_since_footstep = 0;
+    public Text score_reg;
+    private int score;
 
     private Rigidbody2D rigidbody;
     private AudioSource footstep;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         footstep = GetComponent<AudioSource>();
+        animator = this.GetComponent<Animator>();
+        score = 0;;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float xpos = transform.position.x + Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        float ypos = transform.position.y + Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        transform.position = new Vector2(xpos, ypos);
-        if (Input.GetAxis("Horizontal")!=0||Input.GetAxis("Vertical")!=0)
+        int h = (int)Input.GetAxis("Horizontal");
+        int v = (int)Input.GetAxis("Vertical");
+
+        animator.SetInteger("horizontal", (int)h);
+        animator.SetInteger("vertical", (int)v);
+
+        transform.position = (Vector2)transform.position + (speed * Time.deltaTime * new Vector2(h, v).normalized);
+        if (h == 0 && v == 0)
         {
+            time_since_footstep = 0;
+        } else {
+            if (time_since_footstep==0) { footstep.Play(); }
             time_since_footstep += Time.deltaTime;
-            if (time_since_footstep==2.0) { footstep.Play(); }
-        } else { time_since_footstep = 0; }
+            if (time_since_footstep>=footstep_speed) { footstep.Play(); time_since_footstep = 0; }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("goblin"))
+        {
+            other.gameObject.SetActive(false);
+            score += 1;
+            print(score);
+            setScore();
+        }
+    }
+
+    private void setScore()
+    {
+        score_reg.text = score.ToString();
     }
 }
