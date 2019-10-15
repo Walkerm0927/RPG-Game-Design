@@ -1,8 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class PlayerController : MonoBehaviour
 {
     public float speed;
@@ -29,15 +29,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        int h = (int)Input.GetAxis("Horizontal");
+        int v = (int)Input.GetAxis("Vertical");
 
         animator.SetInteger("horizontal", (int)h);
         animator.SetInteger("vertical", (int)v);
 
-        float xpos = transform.position.x + h * speed * Time.deltaTime;
-        float ypos = transform.position.y + v * speed * Time.deltaTime;
-        transform.position = new Vector2(xpos, ypos);
+        transform.position = (Vector2)transform.position + (speed * Time.deltaTime * new Vector2(h, v).normalized);
         if (h == 0 && v == 0)
         {
             time_since_footstep = 0;
