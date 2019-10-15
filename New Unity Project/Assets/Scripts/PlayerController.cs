@@ -17,13 +17,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidbody;
     private AudioSource footstep;
     private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         footstep = GetComponent<AudioSource>();
         animator = this.GetComponent<Animator>();
-        score = 0;
+        score = 0;;
     }
 
     // Update is called once per frame
