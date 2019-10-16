@@ -54,11 +54,11 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             score += 1;
             print(score);
-            setScore();
+            SetScore();
         }
     }
 
-    private void setScore()
+    private void SetScore()
     {
         score_reg.text = score.ToString();
     }
