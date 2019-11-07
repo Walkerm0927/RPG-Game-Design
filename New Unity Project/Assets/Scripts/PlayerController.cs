@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float time_since_footstep = 0;
     public Text score_reg;
     private int score;
+    public int keys;
 
     private Rigidbody2D rigidbody;
     private AudioSource footstep;
@@ -24,7 +25,8 @@ public class PlayerController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         footstep = GetComponent<AudioSource>();
         animator = this.GetComponent<Animator>();
-        score = 0;;
+        score = 0;
+        keys = 0;
     }
 
     // Update is called once per frame
@@ -55,6 +57,9 @@ public class PlayerController : MonoBehaviour
             score += 1;
             print(score);
             SetScore();
+        } else if (other.gameObject.CompareTag("key")) {
+            keys += 1;
+            other.gameObject.SetActive(false);
         }
     }
 
