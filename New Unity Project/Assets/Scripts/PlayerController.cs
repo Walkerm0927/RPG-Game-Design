@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public Text score_reg;
     private int score;
     public int keys;
+    public ParticleSystem dust;
 
     private Rigidbody2D rigidbody;
     private AudioSource footstep;
@@ -37,9 +38,9 @@ public class PlayerController : MonoBehaviour
     {
         int h = (int)Input.GetAxis("Horizontal");
         int v = (int)Input.GetAxis("Vertical");
-        bool f = Input.GetKey("space");
+        bool fire = Input.GetKey("space");
 
-        if (f && time_since_fire > reload_time_longrange)
+        if (fire && time_since_fire > reload_time_longrange)
         {
             time_since_fire = 0;
             animator.SetBool("fire", true);
@@ -51,11 +52,14 @@ public class PlayerController : MonoBehaviour
         animator.SetInteger("horizontal", (int)h);
         animator.SetInteger("vertical", (int)v);
 
-        transform.position = (Vector2)transform.position + (speed * Time.deltaTime * new Vector2(h, v).normalized);
         if (h == 0 && v == 0)
         {
             time_since_footstep = 0;
+
+            dust.Play();
+
         } else {
+            transform.position = (Vector2)transform.position + (speed * Time.deltaTime * new Vector2(h, v).normalized);
             if (time_since_footstep==0) { footstep.Play(); }
             time_since_footstep += Time.deltaTime;
             if (time_since_footstep>=footstep_speed) { footstep.Play(); time_since_footstep = 0; }
@@ -80,4 +84,5 @@ public class PlayerController : MonoBehaviour
     {
         score_reg.text = score.ToString();
     }
+
 }
