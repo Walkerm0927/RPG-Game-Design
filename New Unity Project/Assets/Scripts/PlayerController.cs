@@ -11,8 +11,10 @@ public class PlayerController : MonoBehaviour
     public float reload_time_dash;
     public float footstep_speed = 2;
     public float time_since_footstep = 0;
+    public float time_since_fire;
     public Text score_reg;
     private int score;
+    public int keys;
 
     private Rigidbody2D rigidbody;
     private AudioSource footstep;
@@ -24,7 +26,10 @@ public class PlayerController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         footstep = GetComponent<AudioSource>();
         animator = this.GetComponent<Animator>();
-        score = 0;;
+        score = 0;
+        keys = 0;
+        reload_time_longrange = 1;
+        time_since_fire = reload_time_longrange+1;
     }
 
     // Update is called once per frame
@@ -32,6 +37,16 @@ public class PlayerController : MonoBehaviour
     {
         int h = (int)Input.GetAxis("Horizontal");
         int v = (int)Input.GetAxis("Vertical");
+        bool f = Input.GetKey("space");
+
+        if (f && time_since_fire > reload_time_longrange)
+        {
+            time_since_fire = 0;
+            animator.SetBool("fire", true);
+        } else {
+            time_since_fire += Time.deltaTime;
+            if (time_since_fire > 0.3) { animator.SetBool("fire", false); }
+        }
 
         animator.SetInteger("horizontal", (int)h);
         animator.SetInteger("vertical", (int)v);
@@ -55,6 +70,9 @@ public class PlayerController : MonoBehaviour
             score += 1;
             print(score);
             SetScore();
+        } else if (other.gameObject.CompareTag("key")) {
+            keys += 1;
+            other.gameObject.SetActive(false);
         }
     }
 
