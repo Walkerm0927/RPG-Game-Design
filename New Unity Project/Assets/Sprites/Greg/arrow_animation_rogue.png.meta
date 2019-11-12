@@ -1,0 +1,679 @@
+fileFormatVersion: 2
+guid: 79fc12abe870fa941acf4bd2741465c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 158643877667683297
+    second: arrow_animation_rogue_0
+  - first:
+      213: 2654624119295960293
+    second: arrow_animation_rogue_1
+  - first:
+      213: 4942419767067033210
+    second: arrow_animation_rogue_2
+  - first:
+      213: 18076595316517991
+    second: arrow_animation_rogue_3
+  - first:
+      213: -3275443932303636948
+    second: arrow_animation_rogue_4
+  - first:
+      213: -6928745311904637079
+    second: arrow_animation_rogue_5
+  - first:
+      213: 8228440155616456780
+    second: arrow_animation_rogue_6
+  - first:
+      213: 7729462563638510089
+    second: arrow_animation_rogue_7
+  - first:
+      213: 470777400044877997
+    second: arrow_animation_rogue_8
+  - first:
+      213: 9099866943900126975
+    second: arrow_animation_rogue_9
+  - first:
+      213: 4079774123720424157
+    second: arrow_animation_rogue_10
+  - first:
+      213: 8837134602625419439
+    second: arrow_animation_rogue_11
+  - first:
+      213: 1430301689854219223
+    second: arrow_animation_rogue_12
+  - first:
+      213: 8918345412324507747
+    second: arrow_animation_rogue_13
+  - first:
+      213: 7463247891502015799
+    second: arrow_animation_rogue_14
+  - first:
+      213: -716943821311114914
+    second: arrow_animation_rogue_15
+  - first:
+      213: 5508332863535174034
+    second: arrow_animation_rogue_16
+  - first:
+      213: 232610673806936061
+    second: arrow_animation_rogue_17
+  - first:
+      213: -973023726171465694
+    second: arrow_animation_rogue_18
+  - first:
+      213: -1216945592056293895
+    second: arrow_animation_rogue_19
+  - first:
+      213: 3445156260445440958
+    second: arrow_animation_rogue_20
+  - first:
+      213: 2977407488265050704
+    second: arrow_animation_rogue_21
+  - first:
+      213: -8396342305549654494
+    second: arrow_animation_rogue_22
+  - first:
+      213: 6988769503814833769
+    second: arrow_animation_rogue_23
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: arrow_animation_rogue_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 157
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64be3ea381852a3468e8eb26a3a73725
+      internalID: 158643877667683297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 158
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43c6ad326207c746b0853a909b2f769
+      internalID: 2654624119295960293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 158
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b304fb6874b2224abf52fa4de1ad3fc
+      internalID: 4942419767067033210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 158
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d159fdd9d9dc6149a26ab98d17ac598
+      internalID: 18076595316517991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 158
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a534d96f747125d428ffbbc290527094
+      internalID: -3275443932303636948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 126
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b519982349a71f468851375799984e3
+      internalID: -6928745311904637079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 126
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528b54814eee3824ea0d74384c02cabd
+      internalID: 8228440155616456780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_7
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 126
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63437bb9aed3dba40ac81c7855d88f2b
+      internalID: 7729462563638510089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_8
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 127
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1283ef47da5bcc347b1168903d998bc3
+      internalID: 470777400044877997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 95
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2e571fed474a045afa8db3b3c5546c
+      internalID: 9099866943900126975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_10
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 95
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bad07218c128344ac950e1236f0c2a
+      internalID: 4079774123720424157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_11
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 94
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd720f9bc61ad34d875a07e2e100ab1
+      internalID: 8837134602625419439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_12
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 97
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e72d989147dd89c40a7fb8d25e3fc6da
+      internalID: 1430301689854219223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_13
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 66
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ac72c850d68164daf65bde4fcfc315
+      internalID: 8918345412324507747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_14
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 66
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a73cc074efa39439260a2eeca9d597
+      internalID: 7463247891502015799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 66
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5a644da2b65984f87a8d77368aadd6
+      internalID: -716943821311114914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_16
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 66
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c02aa0908f31be4096b7a0b74b702ba
+      internalID: 5508332863535174034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_17
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 66
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1b6a47a5520934b8a3460b60a13575
+      internalID: 232610673806936061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 38
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab9a0c8cbf5aee429bd025fa695818e
+      internalID: -973023726171465694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_19
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 38
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d19560dec022d4b8dac9e7d4891cfa
+      internalID: -1216945592056293895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_20
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 38
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c5c4d2d6472134f9468ecb52896a34
+      internalID: 3445156260445440958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_21
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 38
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e5bd87bdbee1a4c80542ea46182860
+      internalID: 2977407488265050704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_22
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 38
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ae217f1eef30f478bf1e5dbf2d23ef
+      internalID: -8396342305549654494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_animation_rogue_23
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 10
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747ad0603d2a17d4cb4ce44e1f23c601
+      internalID: 6988769503814833769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
