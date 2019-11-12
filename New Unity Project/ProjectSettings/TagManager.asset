@@ -46,6 +46,9 @@ TagManager:
   - name: Background
     uniqueID: 3699941707
     locked: 0
+  - name: Effects
+    uniqueID: 2396105901
+    locked: 0
   - name: Sprites
     uniqueID: 2172000331
     locked: 0

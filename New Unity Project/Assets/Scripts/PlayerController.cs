@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private int score;
     public int keys;
     public ParticleSystem dust;
+    public ParticleSystem spatter;
 
     private Rigidbody2D rigidbody;
     private AudioSource footstep;
@@ -46,7 +47,8 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("fire", true);
         } else {
             time_since_fire += Time.deltaTime;
-            if (time_since_fire > 0.3) { animator.SetBool("fire", false); }
+            if (time_since_fire > 0.3) { 
+                animator.SetBool("fire", false); }
         }
 
         animator.SetInteger("horizontal", (int)h);
@@ -70,6 +72,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("goblin"))
         {
+            spatter.transform.position = other.gameObject.transform.position;
+            spatter.Play();
             other.gameObject.SetActive(false);
             score += 1;
             print(score);
