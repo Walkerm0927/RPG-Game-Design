@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public int keys;
     public ParticleSystem dust;
     public ParticleSystem spatter;
+    public AudioSource splat;
 
     private Rigidbody2D rigidbody;
     private AudioSource footstep;
@@ -74,6 +75,7 @@ public class PlayerController : MonoBehaviour
         {
             spatter.transform.position = other.gameObject.transform.position;
             spatter.Play();
+            splat.Play();
             other.gameObject.SetActive(false);
             score += 1;
             print(score);
