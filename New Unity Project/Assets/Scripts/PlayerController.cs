@@ -16,15 +16,15 @@ public class PlayerController : MonoBehaviour
     private int score;
     public int keys;
 
-    private float attack_timer = 0;
+    public float attack_timer = 0;
     public float attack_time_execute;
-    private bool attack = false;
+    public bool attack = false;
 
     public ParticleSystem dust;
     public ParticleSystem spatter;
     public AudioSource splat;
 
-    private Rigidbody2D rigidbody;
+    Rigidbody2D rigidbody;
     private AudioSource footstep;
     private Animator animator;
 
