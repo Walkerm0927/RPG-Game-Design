@@ -11,10 +11,19 @@ public class PlayerController : MonoBehaviour
     public float reload_time_dash;
     public float footstep_speed = 2;
     public float time_since_footstep = 0;
+    public float time_between_footstep = 0;
     public float time_since_fire;
     public Text score_reg;
     private int score;
     public int keys;
+    public float regen_time;
+    public float regen_amount;
+
+    public float time_with_goblin = 0;
+    public float goblin_attack_start;
+    public float goblin_attack_end;
+    public float goblin_attack_strength;
+    public float health = 1;
 
     public float attack_timer = 0;
     public float attack_time_execute;
@@ -63,10 +72,12 @@ public class PlayerController : MonoBehaviour
         if (h == 0 && v == 0)
         {
             time_since_footstep = 0;
-
+            time_between_footstep += Time.deltaTime;
+            if (time_between_footstep > regen_time && health < 1) { health += regen_amount; time_between_footstep = 0; }
             dust.Play();
 
         } else {
+            time_between_footstep = 0;
             transform.position = (Vector2)transform.position + (speed * Time.deltaTime * new Vector2(h, v).normalized);
             if (time_since_footstep==0) { footstep.Play(); }
             time_since_footstep += Time.deltaTime;
@@ -78,6 +89,12 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("goblin"))
         {
+            time_with_goblin += Time.deltaTime;
+            if (time_with_goblin >= goblin_attack_end)
+            {
+                health -= goblin_attack_strength;
+                time_with_goblin = 0;
+            }
             if (Input.GetKey("space"))
             {
                 attack = true;
@@ -95,6 +112,7 @@ public class PlayerController : MonoBehaviour
                     print(score);
                     SetScore();
                     attack = false;
+                    attack_timer = 0;
                 }
             }
         }
@@ -106,6 +124,7 @@ public class PlayerController : MonoBehaviour
         {
             attack = false;
             attack_timer = 0;
+            time_with_goblin = 0;
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

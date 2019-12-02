@@ -20,6 +20,8 @@ public class GoblinController : MonoBehaviour
     public float playerlocy;
     public float playerdist;
     public Vector2 direction;
+    public float dist_to_player;
+    public float min_dist;
 
     Rigidbody2D rigidbody;
     private Animator animator;
@@ -60,14 +62,22 @@ public class GoblinController : MonoBehaviour
                 }
             }
 
-        } else
+        }
+        else
         {
             playerlocx = player.position.x - transform.position.x;
             playerlocy = player.position.y - transform.position.y;
-            if (playerlocx > 0.1) { hor = 1; }
-            else if (playerlocx < -0.1) { hor = -1; } else { hor = 0; }
-            if (playerlocy > 0) { ver = 1; }
-            else if (playerlocy < 0) { ver = -1; } else { ver = 0; }
+
+            dist_to_player = new Vector2(playerlocx, playerlocy).magnitude;
+            hor = 0;
+            ver = 0;
+            if (dist_to_player > min_dist)
+            {
+                if (playerlocx > 0.1) { hor = 1; }
+                else if (playerlocx < -0.1) { hor = -1; } else { hor = 0; }
+                if (playerlocy > 0) { ver = 1; }
+                else if (playerlocy < 0) { ver = -1; } else { ver = 0; }
+            }
         }
         animator.SetInteger("horizontal", hor);
         animator.SetInteger("vertical", ver);
