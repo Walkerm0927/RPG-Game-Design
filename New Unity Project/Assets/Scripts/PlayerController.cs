@@ -69,18 +69,27 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("goblin"))
         {
-            spatter.transform.position = other.gameObject.transform.position;
-            spatter.Play();
-            splat.Play();
-            other.gameObject.SetActive(false);
-            score += 1;
-            print(score);
-            SetScore();
-        } else if (other.gameObject.CompareTag("key")) {
+            if (Input.GetKey("space"))
+            {
+                spatter.transform.position = other.gameObject.transform.position;
+                spatter.Play();
+                splat.Play();
+                other.gameObject.SetActive(false);
+                score += 1;
+                print(score);
+                SetScore();
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("key"))
+        {
             keys += 1;
             other.gameObject.SetActive(false);
         }
