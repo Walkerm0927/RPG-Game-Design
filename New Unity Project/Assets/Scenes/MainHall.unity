@@ -813,6 +813,11 @@ PrefabInstance:
       propertyPath: splat
       value: 
       objectReference: {fileID: 501919876}
+    - target: {fileID: 1207360411002794679, guid: 6ffed916632e8124aaaeb6a2540be238,
+        type: 3}
+      propertyPath: attack_time_execute
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1207360411002794682, guid: 6ffed916632e8124aaaeb6a2540be238,
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.size

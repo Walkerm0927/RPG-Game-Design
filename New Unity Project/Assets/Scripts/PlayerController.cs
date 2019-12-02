@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour
     public Text score_reg;
     private int score;
     public int keys;
+
+    private float attack_timer = 0;
+    public float attack_time_execute;
+    private bool attack = false;
+
     public ParticleSystem dust;
     public ParticleSystem spatter;
     public AudioSource splat;
@@ -75,17 +80,34 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey("space"))
             {
-                spatter.transform.position = other.gameObject.transform.position;
-                spatter.Play();
-                splat.Play();
-                other.gameObject.SetActive(false);
-                score += 1;
-                print(score);
-                SetScore();
+                attack = true;
+            }
+            if (attack == true)
+            {
+                attack_timer += Time.deltaTime;
+                if (attack_timer >= attack_time_execute)
+                {
+                    spatter.transform.position = other.gameObject.transform.position;
+                    spatter.Play();
+                    splat.Play();
+                    other.gameObject.SetActive(false);
+                    score += 1;
+                    print(score);
+                    SetScore();
+                    attack = false;
+                }
             }
         }
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("goblin"))
+        {
+            attack = false;
+            attack_timer = 0;
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("key"))
