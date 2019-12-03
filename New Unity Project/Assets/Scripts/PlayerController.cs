@@ -81,6 +81,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!with_goblin)
             {
+                regen = true;
                 time_since_footstep = 0;
                 time_between_footstep += Time.deltaTime;
                 time_between_footstep2 += Time.deltaTime;
@@ -143,7 +144,6 @@ public class PlayerController : MonoBehaviour
                     attack = false;
                     attack_timer = 0;
                     with_goblin = false;
-                    regen = true;
                 }
             }
         }

@@ -22,6 +22,7 @@ public class GoblinController : MonoBehaviour
     public Vector2 direction;
     public float dist_to_player;
     public float min_dist;
+    private bool dialogue;
 
     Rigidbody2D rigidbody;
     private Animator animator;
@@ -39,6 +40,7 @@ public class GoblinController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        dialogue = FindObjectOfType<DialogueManager>().dialogue;
         if (seen == false)
         {
             time_since_turn += Time.deltaTime;
@@ -79,14 +81,17 @@ public class GoblinController : MonoBehaviour
                 else if (playerlocy < 0) { ver = -1; } else { ver = 0; }
             }
         }
-        animator.SetInteger("horizontal", hor);
-        animator.SetInteger("vertical", ver);
+        if (!dialogue)
+        {
+            animator.SetInteger("horizontal", hor);
+            animator.SetInteger("vertical", ver);
 
-        direction = new Vector2(hor, ver).normalized;
-        
-        float newx = transform.position.x + speed * Time.deltaTime * hor;
-        float newy = transform.position.y + speed * Time.deltaTime * ver;
-        transform.position = new Vector2(transform.position.x,transform.position.y) + speed*Time.deltaTime*direction;
+            direction = new Vector2(hor, ver).normalized;
+
+            float newx = transform.position.x + speed * Time.deltaTime * hor;
+            float newy = transform.position.y + speed * Time.deltaTime * ver;
+            transform.position = new Vector2(transform.position.x, transform.position.y) + speed * Time.deltaTime * direction;
+        }
     }
 
     int Turnlefth(int h,int v)
