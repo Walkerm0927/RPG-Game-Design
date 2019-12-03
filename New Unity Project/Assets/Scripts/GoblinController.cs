@@ -73,8 +73,8 @@ public class GoblinController : MonoBehaviour
             ver = 0;
             if (dist_to_player > min_dist)
             {
-                if (playerlocx > 0.1) { hor = 1; }
-                else if (playerlocx < -0.1) { hor = -1; } else { hor = 0; }
+                if (playerlocx > 0.3) { hor = 1; }
+                else if (playerlocx < -0.3) { hor = -1; } else { hor = 0; }
                 if (playerlocy > 0) { ver = 1; }
                 else if (playerlocy < 0) { ver = -1; } else { ver = 0; }
             }

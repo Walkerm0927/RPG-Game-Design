@@ -6,6 +6,7 @@ TagManager:
   tags:
   - goblin
   - key
+  - npc1
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - Background
   - Sprites
-  - 
+  - NewUI
   - 
   - 
   - 
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: Sprites
     uniqueID: 2172000331
+    locked: 0
+  - name: UI
+    uniqueID: 1866449607
     locked: 0

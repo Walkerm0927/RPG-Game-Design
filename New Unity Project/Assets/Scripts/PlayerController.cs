@@ -12,10 +12,12 @@ public class PlayerController : MonoBehaviour
     public float footstep_speed = 2;
     public float time_since_footstep = 0;
     public float time_between_footstep = 0;
+    public float time_between_footstep2 = 0;
     public float time_since_fire;
     public Text score_reg;
     private int score;
     public int keys;
+    public Text keys_reg;
     public float regen_time;
     public float regen_amount;
 
@@ -24,10 +26,14 @@ public class PlayerController : MonoBehaviour
     public float goblin_attack_end;
     public float goblin_attack_strength;
     public float health = 1;
+    bool with_goblin = false;
 
     public float attack_timer = 0;
     public float attack_time_execute;
     public bool attack = false;
+    public Animator healthtext;
+    public Animator healthbarcolor;
+    public Transform healthbar;
 
     public ParticleSystem dust;
     public ParticleSystem spatter;
@@ -36,6 +42,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rigidbody;
     private AudioSource footstep;
     private Animator animator;
+    public bool regen;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +54,7 @@ public class PlayerController : MonoBehaviour
         keys = 0;
         reload_time_longrange = 1;
         time_since_fire = reload_time_longrange+1;
+        regen = true;
     }
 
     // Update is called once per frame
@@ -71,17 +79,38 @@ public class PlayerController : MonoBehaviour
 
         if (h == 0 && v == 0)
         {
-            time_since_footstep = 0;
-            time_between_footstep += Time.deltaTime;
-            if (time_between_footstep > regen_time && health < 1) { health += regen_amount; time_between_footstep = 0; }
+            if (!with_goblin)
+            {
+                time_since_footstep = 0;
+                time_between_footstep += Time.deltaTime;
+                time_between_footstep2 += Time.deltaTime;
+                if (time_between_footstep > regen_time && health < 1 && regen)
+                {
+                    if (health < 1 - regen_amount)
+                    {
+                        health += regen_amount;
+                    }
+                    else { health = 1; }
+                }
+            }
             dust.Play();
 
         } else {
+            regen = false;
             time_between_footstep = 0;
+            time_between_footstep2 = 0;
             transform.position = (Vector2)transform.position + (speed * Time.deltaTime * new Vector2(h, v).normalized);
             if (time_since_footstep==0) { footstep.Play(); }
             time_since_footstep += Time.deltaTime;
             if (time_since_footstep>=footstep_speed) { footstep.Play(); time_since_footstep = 0; }
+        }
+        healthtext.SetFloat("health", health);
+        healthbarcolor.SetFloat("health", health);
+        healthbar.transform.localScale = new Vector3(15000 * health, 1200);
+
+        if (health <= 0)
+        {
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 
@@ -113,7 +142,16 @@ public class PlayerController : MonoBehaviour
                     SetScore();
                     attack = false;
                     attack_timer = 0;
+                    with_goblin = false;
+                    regen = true;
                 }
+            }
+        }
+        else if (other.gameObject.CompareTag("npc1"))
+        {
+            if (Input.GetKey("e"))
+            {
+                FindObjectOfType<DialogueManager>().StartDialogue();
             }
         }
     }
@@ -125,6 +163,10 @@ public class PlayerController : MonoBehaviour
             attack = false;
             attack_timer = 0;
             time_with_goblin = 0;
+            with_goblin = false;
+        } else if (other.gameObject.CompareTag("npc1"))
+        {
+            FindObjectOfType<DialogueManager>().EndDialogue();
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -133,12 +175,22 @@ public class PlayerController : MonoBehaviour
         {
             keys += 1;
             other.gameObject.SetActive(false);
+            SetKeys();
+        } else if (other.gameObject.CompareTag("goblin"))
+        {
+            regen = false;
+            with_goblin = true;
         }
     }
 
     private void SetScore()
     {
         score_reg.text = score.ToString();
+    }
+
+    private void SetKeys()
+    {
+        keys_reg.text = keys.ToString();
     }
 
 }
