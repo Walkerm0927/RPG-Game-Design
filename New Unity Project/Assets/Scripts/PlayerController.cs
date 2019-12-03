@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("npc1"))
         {
-            if (Input.GetKey("e"))
+            if (Input.GetKey("e") && !with_goblin)
             {
                 FindObjectOfType<DialogueManager>().StartDialogue();
             }

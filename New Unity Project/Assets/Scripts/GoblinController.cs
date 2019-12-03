@@ -75,8 +75,8 @@ public class GoblinController : MonoBehaviour
             ver = 0;
             if (dist_to_player > min_dist)
             {
-                if (playerlocx > 0.3) { hor = 1; }
-                else if (playerlocx < -0.3) { hor = -1; } else { hor = 0; }
+                if (playerlocx > 0.5) { hor = 1; }
+                else if (playerlocx < -0.5) { hor = -1; } else { hor = 0; }
                 if (playerlocy > 0) { ver = 1; }
                 else if (playerlocy < 0) { ver = -1; } else { ver = 0; }
             }
@@ -91,6 +91,9 @@ public class GoblinController : MonoBehaviour
             float newx = transform.position.x + speed * Time.deltaTime * hor;
             float newy = transform.position.y + speed * Time.deltaTime * ver;
             transform.position = new Vector2(transform.position.x, transform.position.y) + speed * Time.deltaTime * direction;
+        } else {
+            animator.SetInteger("horizontal", 0);
+            animator.SetInteger("vertical", 0);
         }
     }
 
