@@ -27,14 +27,55 @@ public class GoblinController : MonoBehaviour
     Rigidbody2D rigidbody;
     private Animator animator;
 
+    public bool randinithorizontal;
+    public bool randinitvertical;
+
     // Start is called before the first frame update
     void Start()
     {
-        ver = -1;
-        hor = 0;
+        if (!randinithorizontal && !randinitvertical)
+        {
+            ver = -1;
+            hor = 0;
+        } else if (randinitvertical && !randinithorizontal)
+        {
+            hor = 0;
+            ver = 1 - 2 * randbin();
+        } else if (!randinitvertical && randinithorizontal)
+        {
+            hor = 1 - 2 * randbin();
+            ver = 0;
+        } else
+        {
+            int test = randbin();
+            if (test==0)
+            {
+                hor = randtri();
+                if (hor == 0)
+                {
+                    ver = 1 - 2 * randbin();
+                } else
+                {
+                    ver = 0;
+                }
+            } else
+            {
+                ver = randtri();
+                if (ver == 0)
+                {
+                    hor = 1 - 2 * randbin();
+                } else
+                {
+                    hor = 0;
+                }
+            }
+
+        }
+
         animator = this.GetComponent<Animator>();
         animator.SetInteger("horizontal", hor);
         animator.SetInteger("vertical", ver);
+        player = FindObjectOfType<PlayerController>().transform;
     }
 
     // Update is called once per frame
@@ -132,5 +173,31 @@ public class GoblinController : MonoBehaviour
             hor = 0;
             ver = 0;
         }
+    }
+
+    private int randbin()
+    {
+        float y = UnityEngine.Random.value;
+        if (y < 0.5)
+        {
+            return 0;
+        } else
+        {
+            return 1;
+        }
+    }
+
+    private int randtri()
+    {
+        float y = UnityEngine.Random.value;
+        if (y < 0.334)
+        {
+            return -1;
+        }
+        else if (y > 0.667)
+        {
+            return 0;
+        }
+        else return 1;
     }
 }

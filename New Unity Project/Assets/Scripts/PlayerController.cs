@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     public Animator healthtext;
     public Animator healthbarcolor;
     public Transform healthbar;
+    public int goblins_remaining;
+    public GameObject key;
 
     public ParticleSystem dust;
     public ParticleSystem spatter;
@@ -54,15 +56,19 @@ public class PlayerController : MonoBehaviour
         footstep = GetComponent<AudioSource>();
         animator = this.GetComponent<Animator>();
         score = 0;
-        keys = 0;
         reload_time_longrange = 1;
         time_since_fire = reload_time_longrange+1;
         regen = true;
+        SetKeys();
+        goblins_remaining = GameObject.FindGameObjectsWithTag("goblin").Length;
+        score = goblins_remaining;
+        SetScore();
     }
 
     // Update is called once per frame
     void Update()
     {
+        goblins_remaining = GameObject.FindGameObjectsWithTag("goblin").Length;
         if (!dialogue)
         {
             int h = (int)Input.GetAxis("Horizontal");
@@ -152,8 +158,9 @@ public class PlayerController : MonoBehaviour
                     spatter.Play();
                     splat.Play();
                     other.gameObject.SetActive(false);
-                    score += 1;
+                    score = GameObject.FindGameObjectsWithTag("goblin").Length;
                     print(score);
+                    if (score == 0) { key.SetActive(true); }
                     SetScore();
                     attack = false;
                     attack_timer = 0;

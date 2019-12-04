@@ -55,6 +55,7 @@ public class DialogueManager : MonoBehaviour
         dialogue = false;
         anim.SetBool("dialogue", false);
         FindObjectOfType<PlayerController>().dialogue = false;
+        sentences.Clear();
     }
 
     public void OnMouseDown()

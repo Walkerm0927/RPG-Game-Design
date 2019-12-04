@@ -602,6 +602,8 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   dist_to_player: 0
   min_dist: 0.6
+  randinithorizontal: 0
+  randinitvertical: 0
 --- !u!1 &1227859711
 GameObject:
   m_ObjectHideFlags: 0
