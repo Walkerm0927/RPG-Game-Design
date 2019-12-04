@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
                 time_since_footstep += Time.deltaTime;
                 if (time_since_footstep >= footstep_speed) { footstep.Play(); time_since_footstep = 0; }
             }
-        } else { dust.Play(); }
+        } else { dust.Play(); animator.SetInteger("horizontal", 0); animator.SetInteger("vertical", 0); }
 
         healthtext.SetFloat("health", health);
         healthbarcolor.SetFloat("health", health);
@@ -168,6 +168,12 @@ public class PlayerController : MonoBehaviour
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue();
                 with_npc = false;
                 dialogue = true;
+                int sc = FindObjectOfType<GameManager>().scenenum;
+                if (sc == 1)
+                {
+                    keys += 1;
+                    SetKeys();
+                } else { Debug.Log(sc); }
             }
         }
     }

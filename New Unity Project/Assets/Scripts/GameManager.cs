@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    public int scenenum;
     bool game_has_ended = false;
+
+    private void Start()
+    {
+        scenenum = SceneManager.GetActiveScene().buildIndex;
+    }
     public void EndGame()
     {
         if (!game_has_ended)
