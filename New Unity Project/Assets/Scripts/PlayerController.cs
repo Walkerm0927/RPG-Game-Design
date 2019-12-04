@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("npc1"))
         {
-            if (Input.GetKey("e") && !with_goblin && with_npc)
+            if (Input.GetKey("e") && !with_goblin && with_npc && GameObject.FindGameObjectsWithTag("goblin").Length==0)
             {
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue();
                 with_npc = false;
