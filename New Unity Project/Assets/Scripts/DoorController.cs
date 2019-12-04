@@ -20,9 +20,13 @@ public class DoorController : MonoBehaviour
 
     public void Update()
     {
-        if (greg.keys>keycount)
+        if (greg.keys==keycount)
         {
             unlocked = true;
+        } else if (greg.keys > keycount) {
+            dialogue.name = "Cleared Room";
+            dialogue.sentences = new string[1];
+            dialogue.sentences[0] = "You already cleared this room!"; 
         }
     }
 
@@ -38,6 +42,14 @@ public class DoorController : MonoBehaviour
             FindObjectOfType<GameManager>().LevelUp();
         } else if (collision.gameObject.CompareTag("Player") && !unlocked) {
             TriggerDialogue();
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            FindObjectOfType<DialogueManager>().EndDialogue();
         }
     }
 }

@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private AudioSource footstep;
     private Animator animator;
     public bool regen;
+    private bool haskey = false;
 
     // Start is called before the first frame update
     void Start()
@@ -175,12 +176,12 @@ public class PlayerController : MonoBehaviour
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue();
                 with_npc = false;
                 dialogue = true;
-                int sc = FindObjectOfType<GameManager>().scenenum;
-                if (sc == 1)
+                if (haskey == false)
                 {
                     keys += 1;
                     SetKeys();
-                } else { Debug.Log(sc); }
+                    haskey = true;
+                }
             }
         }
     }
