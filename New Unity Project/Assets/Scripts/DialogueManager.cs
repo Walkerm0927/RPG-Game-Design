@@ -17,12 +17,20 @@ public class DialogueManager : MonoBehaviour
         dialogue = false;
         sentences = new Queue<string>();
     }
-    
+
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && dialogue)
+        {
+            DisplayNextSentence();
+        }
+    }
     public void StartDialogue(Dialogue d)
     {
         dialogue = true;
         anim.SetBool("dialogue", true);
-
+        nametext.text = d.name;
         foreach (string sentence in d.sentences)
         {
             sentences.Enqueue(sentence);
@@ -38,11 +46,21 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+        string sentence = sentences.Dequeue();
+        dialoguetext.text = sentence;
     }
 
     public void EndDialogue()
     {
         dialogue = false;
         anim.SetBool("dialogue", false);
+    }
+
+    public void OnMouseDown()
+    {
+        if (dialogue)
+        {
+            DisplayNextSentence();
+        }
     }
 }

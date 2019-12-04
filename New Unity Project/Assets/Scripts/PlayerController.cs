@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public float goblin_attack_strength;
     private float health = 1;
     bool with_goblin = false;
+    private bool with_npc = false;
 
     private float attack_timer = 0;
     public float attack_time_execute;
@@ -149,9 +150,10 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("npc1"))
         {
-            if (Input.GetKey("e") && !with_goblin)
+            if (Input.GetKey("e") && !with_goblin && with_npc)
             {
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+                with_npc = false;
             }
         }
     }
@@ -167,6 +169,7 @@ public class PlayerController : MonoBehaviour
         } else if (other.gameObject.CompareTag("npc1"))
         {
             FindObjectOfType<DialogueManager>().EndDialogue();
+            with_npc = false;
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -180,6 +183,9 @@ public class PlayerController : MonoBehaviour
         {
             regen = false;
             with_goblin = true;
+        } else if (other.gameObject.CompareTag("npc1"))
+        {
+            with_npc = true;
         }
     }
 
