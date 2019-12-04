@@ -9,10 +9,10 @@ public class PlayerController : MonoBehaviour
     public float reload_time_shortrange;
     public float reload_time_longrange;
     public float reload_time_dash;
-    public float footstep_speed = 2;
-    public float time_since_footstep = 0;
-    public float time_between_footstep = 0;
-    public float time_between_footstep2 = 0;
+    private float footstep_speed = 2;
+    private float time_since_footstep = 0;
+    private float time_between_footstep = 0;
+    private float time_between_footstep2 = 0;
     public float time_since_fire;
     public Text score_reg;
     private int score;
@@ -21,16 +21,16 @@ public class PlayerController : MonoBehaviour
     public float regen_time;
     public float regen_amount;
 
-    public float time_with_goblin = 0;
+    private float time_with_goblin = 0;
     public float goblin_attack_start;
     public float goblin_attack_end;
     public float goblin_attack_strength;
-    public float health = 1;
+    private float health = 1;
     bool with_goblin = false;
 
-    public float attack_timer = 0;
+    private float attack_timer = 0;
     public float attack_time_execute;
-    public bool attack = false;
+    private bool attack = false;
     public Animator healthtext;
     public Animator healthbarcolor;
     public Transform healthbar;
@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey("e") && !with_goblin)
             {
-                FindObjectOfType<DialogueManager>().StartDialogue();
+                FindObjectOfType<DialogueTrigger>().TriggerDialogue();
             }
         }
     }
