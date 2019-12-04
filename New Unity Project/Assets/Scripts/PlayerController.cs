@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
+    public bool dialogue = false;
     public float speed;
     public float reload_time_shortrange;
     public float reload_time_longrange;
@@ -62,52 +63,62 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int h = (int)Input.GetAxis("Horizontal");
-        int v = (int)Input.GetAxis("Vertical");
-        bool fire = Input.GetKey("space");
-
-        if (fire && time_since_fire > reload_time_longrange)
+        if (!dialogue)
         {
-            time_since_fire = 0;
-            animator.SetBool("fire", true);
-            pew.Play();
-        } else {
-            time_since_fire += Time.deltaTime;
-            if (time_since_fire > 0.3) { 
-                animator.SetBool("fire", false); }
-        }
+            int h = (int)Input.GetAxis("Horizontal");
+            int v = (int)Input.GetAxis("Vertical");
+            bool fire = Input.GetKey("space");
 
-        animator.SetInteger("horizontal", (int)h);
-        animator.SetInteger("vertical", (int)v);
-
-        if (h == 0 && v == 0)
-        {
-            if (!with_goblin)
+            if (fire && time_since_fire > reload_time_longrange)
             {
-                regen = true;
-                time_since_footstep = 0;
-                time_between_footstep += Time.deltaTime;
-                time_between_footstep2 += Time.deltaTime;
-                if (time_between_footstep > regen_time && health < 1 && regen)
+                time_since_fire = 0;
+                animator.SetBool("fire", true);
+                pew.Play();
+            }
+            else
+            {
+                time_since_fire += Time.deltaTime;
+                if (time_since_fire > 0.3)
                 {
-                    if (health < 1 - regen_amount)
-                    {
-                        health += regen_amount;
-                    }
-                    else { health = 1; }
+                    animator.SetBool("fire", false);
                 }
             }
-            dust.Play();
 
-        } else {
-            regen = false;
-            time_between_footstep = 0;
-            time_between_footstep2 = 0;
-            transform.position = (Vector2)transform.position + (speed * Time.deltaTime * new Vector2(h, v).normalized);
-            if (time_since_footstep==0) { footstep.Play(); }
-            time_since_footstep += Time.deltaTime;
-            if (time_since_footstep>=footstep_speed) { footstep.Play(); time_since_footstep = 0; }
-        }
+            animator.SetInteger("horizontal", (int)h);
+            animator.SetInteger("vertical", (int)v);
+
+            if (h == 0 && v == 0)
+            {
+                if (!with_goblin)
+                {
+                    regen = true;
+                    time_since_footstep = 0;
+                    time_between_footstep += Time.deltaTime;
+                    time_between_footstep2 += Time.deltaTime;
+                    if (time_between_footstep > regen_time && health < 1 && regen)
+                    {
+                        if (health < 1 - regen_amount)
+                        {
+                            health += regen_amount;
+                        }
+                        else { health = 1; }
+                    }
+                }
+                dust.Play();
+
+            }
+            else
+            {
+                regen = false;
+                time_between_footstep = 0;
+                time_between_footstep2 = 0;
+                transform.position = (Vector2)transform.position + (speed * Time.deltaTime * new Vector2(h, v).normalized);
+                if (time_since_footstep == 0) { footstep.Play(); }
+                time_since_footstep += Time.deltaTime;
+                if (time_since_footstep >= footstep_speed) { footstep.Play(); time_since_footstep = 0; }
+            }
+        } else { dust.Play(); }
+
         healthtext.SetFloat("health", health);
         healthbarcolor.SetFloat("health", health);
         healthbar.transform.localScale = new Vector3(15000 * health, 1200);
@@ -156,6 +167,7 @@ public class PlayerController : MonoBehaviour
             {
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue();
                 with_npc = false;
+                dialogue = true;
             }
         }
     }
