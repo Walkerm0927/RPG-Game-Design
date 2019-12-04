@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem dust;
     public ParticleSystem spatter;
     public AudioSource splat;
+    public AudioSource pew;
 
     Rigidbody2D rigidbody;
     private AudioSource footstep;
@@ -69,6 +70,7 @@ public class PlayerController : MonoBehaviour
         {
             time_since_fire = 0;
             animator.SetBool("fire", true);
+            pew.Play();
         } else {
             time_since_fire += Time.deltaTime;
             if (time_since_fire > 0.3) { 
