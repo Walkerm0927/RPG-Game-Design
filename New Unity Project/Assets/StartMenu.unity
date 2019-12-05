@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -661,6 +661,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171097644}
   m_CullTransparentMesh: 0
+--- !u!1001 &1299205486
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8159672149786389055, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
+        type: 3}
+      propertyPath: m_Name
+      value: Soundtrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.32014987
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.0973716
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c988b7f9a1a8f8c4f8a10a96a28bb760, type: 3}
 --- !u!1 &1426356812
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +781,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 20.063877
+  field of view: 15.515817
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -738,7 +807,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426356812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 288.0232, y: 139.28345, z: -143.55478}
+  m_LocalPosition: {x: 244.31, y: 139.28345, z: -143.55478}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -858,10 +927,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 486.3, y: 512}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
