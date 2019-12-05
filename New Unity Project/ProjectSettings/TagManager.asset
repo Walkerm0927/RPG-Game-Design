@@ -8,6 +8,11 @@ TagManager:
   - key
   - npc1
   - door
+  - boss_door
+  - room3_door
+  - room1_door
+  - room2_door
+  - phantom
   layers:
   - Default
   - TransparentFX

@@ -1714,6 +1714,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7505014890485163827, guid: e56a2531733fb0c44b888d639a8dc893,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ff816ca4985afa547b77ca85b204add2,
+        type: 3}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -1743,7 +1749,7 @@ PrefabInstance:
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: Here's the key to this room over here.
+      value: Here's the key to this bedroom over here.
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
@@ -1870,6 +1876,11 @@ PrefabInstance:
     - target: {fileID: 6318436739011653673, guid: 2ec168b3d1af5a14d8a9a8d4bfcb66f3,
         type: 3}
       propertyPath: key
+      value: 
+      objectReference: {fileID: 36631338}
+    - target: {fileID: 6318436739011653673, guid: 2ec168b3d1af5a14d8a9a8d4bfcb66f3,
+        type: 3}
+      propertyPath: phantom
       value: 
       objectReference: {fileID: 36631338}
     m_RemovedComponents: []

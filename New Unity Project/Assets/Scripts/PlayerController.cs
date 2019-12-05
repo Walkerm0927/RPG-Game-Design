@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     public Transform healthbar;
     public int goblins_remaining;
     public GameObject key;
+    public GameObject phantom;
 
     public ParticleSystem dust;
     public ParticleSystem spatter;
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public bool regen;
     private bool haskey = false;
+    public int level;
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +66,8 @@ public class PlayerController : MonoBehaviour
         goblins_remaining = GameObject.FindGameObjectsWithTag("goblin").Length;
         score = goblins_remaining;
         SetScore();
+        level = FindObjectOfType<GameManager>().scenenum;
+        if (level > 0) { haskey = true; }
     }
 
     // Update is called once per frame
@@ -161,7 +165,7 @@ public class PlayerController : MonoBehaviour
                     other.gameObject.SetActive(false);
                     score = GameObject.FindGameObjectsWithTag("goblin").Length;
                     print(score);
-                    if (score == 0) { key.SetActive(true); }
+                    if (score == 0) { key.SetActive(true); phantom.SetActive(true); }
                     SetScore();
                     attack = false;
                     attack_timer = 0;
@@ -169,14 +173,15 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        else if (other.gameObject.CompareTag("npc1"))
+        else if (other.gameObject.CompareTag("npc1")||other.gameObject.CompareTag("phantom"))
         {
             if (Input.GetKey("e") && !with_goblin && with_npc && GameObject.FindGameObjectsWithTag("goblin").Length==0)
             {
-                FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+                DialogueTrigger npc = other.gameObject.GetComponent<DialogueTrigger>();
+                npc.TriggerDialogue();
                 with_npc = false;
                 dialogue = true;
-                if (haskey == false)
+                if (haskey == false && !other.gameObject.CompareTag("phantom"))
                 {
                     keys += 1;
                     SetKeys();
@@ -194,7 +199,7 @@ public class PlayerController : MonoBehaviour
             attack_timer = 0;
             time_with_goblin = 0;
             with_goblin = false;
-        } else if (other.gameObject.CompareTag("npc1"))
+        } else if (other.gameObject.CompareTag("npc1")||other.gameObject.CompareTag("phantom"))
         {
             FindObjectOfType<DialogueManager>().EndDialogue();
             with_npc = false;
@@ -211,7 +216,7 @@ public class PlayerController : MonoBehaviour
         {
             regen = false;
             with_goblin = true;
-        } else if (other.gameObject.CompareTag("npc1"))
+        } else if (other.gameObject.CompareTag("npc1")||other.gameObject.CompareTag("phantom"))
         {
             with_npc = true;
         }

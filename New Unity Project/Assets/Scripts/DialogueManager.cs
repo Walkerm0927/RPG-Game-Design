@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class DialogueManager : MonoBehaviour
 {
     public Text nametext;
@@ -31,6 +30,7 @@ public class DialogueManager : MonoBehaviour
         dialogue = true;
         anim.SetBool("dialogue", true);
         nametext.text = d.name;
+        sentences.Clear();
         foreach (string sentence in d.sentences)
         {
             sentences.Enqueue(sentence);
