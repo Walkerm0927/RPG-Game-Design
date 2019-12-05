@@ -96,25 +96,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &501919875
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6318436739011653674}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2e0ce3e1b9a83884992c5d08903adc0f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &501919877
 AudioSource:
   m_ObjectHideFlags: 0
@@ -211,6 +192,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &501919875
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318436739011653674}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e0ce3e1b9a83884992c5d08903adc0f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3204653847918836590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -321,7 +321,7 @@ PrefabInstance:
     - target: {fileID: 1207360411002794676, guid: 6ffed916632e8124aaaeb6a2540be238,
         type: 3}
       propertyPath: m_Name
-      value: Greg
+      value: Greg Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1207360411002794676, guid: 6ffed916632e8124aaaeb6a2540be238,
         type: 3}
@@ -488,6 +488,11 @@ PrefabInstance:
       propertyPath: pew
       value: 
       objectReference: {fileID: 501919877}
+    - target: {fileID: 1207360411002794679, guid: 6ffed916632e8124aaaeb6a2540be238,
+        type: 3}
+      propertyPath: reload_time_longrange
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ffed916632e8124aaaeb6a2540be238, type: 3}
 --- !u!1 &6318436739011653674 stripped

@@ -59,7 +59,6 @@ public class PlayerController : MonoBehaviour
         footstep = GetComponent<AudioSource>();
         animator = this.GetComponent<Animator>();
         score = 0;
-        reload_time_longrange = 1;
         time_since_fire = reload_time_longrange+1;
         regen = true;
         SetKeys();
@@ -73,6 +72,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        level = FindObjectOfType<GameManager>().scenenum;
         goblins_remaining = GameObject.FindGameObjectsWithTag("goblin").Length;
         if (!dialogue)
         {
@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
                 health -= goblin_attack_strength;
                 time_with_goblin = 0;
             }
-            if (Input.GetKey("space"))
+            if (Input.GetKey("space")&&time_since_fire > reload_time_longrange)
             {
                 attack = true;
             }
@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviour
                 npc.TriggerDialogue();
                 with_npc = false;
                 dialogue = true;
-                if (haskey == false && !other.gameObject.CompareTag("phantom"))
+                if (haskey == false && other.gameObject.CompareTag("npc1"))
                 {
                     keys += 1;
                     SetKeys();
