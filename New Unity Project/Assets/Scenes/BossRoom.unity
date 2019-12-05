@@ -1010,7 +1010,7 @@ PrefabInstance:
     - target: {fileID: 8159672149786389055, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
         type: 3}
       propertyPath: m_Name
-      value: Soundtrack_room3
+      value: Soundtrack_boss
       objectReference: {fileID: 0}
     - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
         type: 3}
@@ -1086,7 +1086,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: b86f6a7e92f652c4f8123485593a7df1, type: 3}
+      objectReference: {fileID: 8300000, guid: f7802b2bc623a3147abb8f3e1c5c8205, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c988b7f9a1a8f8c4f8a10a96a28bb760, type: 3}
 --- !u!1001 &1050542691
@@ -1453,7 +1453,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1480973455 stripped
 GameObject:
@@ -2758,7 +2758,7 @@ PrefabInstance:
     - target: {fileID: 6339772440274249752, guid: 8a0b43563d2ba2745aee5481174be5e9,
         type: 3}
       propertyPath: orthographic size
-      value: 1.4326506
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6339772440274249959, guid: 8a0b43563d2ba2745aee5481174be5e9,
         type: 3}
