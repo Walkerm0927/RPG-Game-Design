@@ -28,6 +28,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue d)
     {
         dialogue = true;
+        FindObjectOfType<PlayerController>().dialogue = true;
         anim.SetBool("dialogue", true);
         nametext.text = d.name;
         sentences.Clear();
