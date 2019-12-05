@@ -36,4 +36,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
