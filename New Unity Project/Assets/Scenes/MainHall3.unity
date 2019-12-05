@@ -300,7 +300,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.3408288, y: 0.65}
+  m_Offset: {x: -1.3461068, y: 0.65}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -311,7 +311,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16834235, y: 0.27999997}
+  m_Size: {x: 0.15778625, y: 0.27999997}
   m_EdgeRadius: 0
 --- !u!114 &412635453
 MonoBehaviour:
@@ -953,7 +953,7 @@ PrefabInstance:
     - target: {fileID: 5943364789832384799, guid: 4465ea10fe95f854594d47b2d144de5d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5943364789832384799, guid: 4465ea10fe95f854594d47b2d144de5d,
         type: 3}
@@ -1063,7 +1063,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1639075577 stripped
 MonoBehaviour:
@@ -1226,7 +1226,7 @@ PrefabInstance:
     - target: {fileID: 581066845273775713, guid: 345455d725c2ff141ae68b48c2a1bc4d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 581066845273775713, guid: 345455d725c2ff141ae68b48c2a1bc4d,
         type: 3}
@@ -1300,7 +1300,7 @@ PrefabInstance:
     - target: {fileID: 968329175439593486, guid: 78a583254676dbc4f8262d101949f2d7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 968329175439593486, guid: 78a583254676dbc4f8262d101949f2d7,
         type: 3}
@@ -1602,7 +1602,7 @@ PrefabInstance:
     - target: {fileID: 7505014890485163824, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7505014890485163824, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
@@ -1628,32 +1628,42 @@ PrefabInstance:
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Not that I'm surprised...
+      value: Oh... hey Spooky Bob.
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: You sure made short work of those goblins. Think you could do it again?
+      value: Since when are you dead?
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: Oh my, you have returned!
+      value: EEK! A GHOST!
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: Here's the key to this room behind me.
+      value: Hey Greg, glad to see you didn't go the way of old Spooky Bob over there.
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: I think that room might be haunted by more than just goblins! **eek**
+      value: Do you think you could clear out the main dining room for me?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: Surely the bards will sing songs of your bravery kind sir.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: Do you think you could clear out the main dining room for me?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e56a2531733fb0c44b888d639a8dc893, type: 3}
@@ -1707,7 +1717,7 @@ PrefabInstance:
     - target: {fileID: 6318436739011653672, guid: 2ec168b3d1af5a14d8a9a8d4bfcb66f3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6318436739011653672, guid: 2ec168b3d1af5a14d8a9a8d4bfcb66f3,
         type: 3}
@@ -1757,7 +1767,12 @@ PrefabInstance:
     - target: {fileID: 6318436739011653673, guid: 2ec168b3d1af5a14d8a9a8d4bfcb66f3,
         type: 3}
       propertyPath: keys
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318436739011653673, guid: 2ec168b3d1af5a14d8a9a8d4bfcb66f3,
+        type: 3}
+      propertyPath: goblin_attack_strength
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ec168b3d1af5a14d8a9a8d4bfcb66f3, type: 3}
@@ -1816,7 +1831,7 @@ PrefabInstance:
     - target: {fileID: 6339772440274249959, guid: 8a0b43563d2ba2745aee5481174be5e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6339772440274249959, guid: 8a0b43563d2ba2745aee5481174be5e9,
         type: 3}
@@ -1895,7 +1910,7 @@ PrefabInstance:
     - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
         type: 3}
@@ -2011,7 +2026,7 @@ PrefabInstance:
     - target: {fileID: 9018177843530165229, guid: 4e96fddd981397243983b597f8238518,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9018177843530165229, guid: 4e96fddd981397243983b597f8238518,
         type: 3}
