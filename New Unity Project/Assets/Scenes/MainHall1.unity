@@ -330,6 +330,27 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences: []
+--- !u!1 &485492011 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7505014890485163826, guid: e56a2531733fb0c44b888d639a8dc893,
+    type: 3}
+  m_PrefabInstance: {fileID: 4661831469176038843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &485492018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485492011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915fff21dfc7640c9be9753121112724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue1:
+    name: 
+    sentences: []
 --- !u!1 &501919868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6318436739011653674, guid: 2ec168b3d1af5a14d8a9a8d4bfcb66f3,
@@ -1803,17 +1824,19 @@ PrefabInstance:
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 11
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: I am Countess LillyPudding and I live here!
+      value: Greg if you can help me clear these anti-establishment monsters we can
+        have a home again!
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: If you can even call this living...
+      value: 'Greg please use this key to go into the next room I believe the rest
+        of the keys are spread out throughout the castle.  '
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
@@ -1858,6 +1881,12 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.sentences.Array.data[10]
       value: And do be careful... there are ever so many goblins in there!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: 'Greg you magnificent Greg you saved us! Oh what is this? A broken key!
+        Greg I can fix these if you bring them to me. '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e56a2531733fb0c44b888d639a8dc893, type: 3}
@@ -2324,7 +2353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1149530920, guid: 4e96fddd981397243983b597f8238518, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.440002
+      value: -14.439941
       objectReference: {fileID: 0}
     - target: {fileID: 1639075576, guid: 4e96fddd981397243983b597f8238518, type: 3}
       propertyPath: m_AnchoredPosition.x

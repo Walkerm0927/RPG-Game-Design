@@ -1619,7 +1619,7 @@ PrefabInstance:
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
@@ -1629,7 +1629,7 @@ PrefabInstance:
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: You sure made short work of those goblins. Think you could do it again?
+      value: I just didn't think they taught you that in law school...
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
@@ -1639,12 +1639,12 @@ PrefabInstance:
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: Here's the key to this room behind me.
+      value: Either way that was amazing!!! Here's the fixed key
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: I think that room might be haunted by more than just goblins! **eek**
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e56a2531733fb0c44b888d639a8dc893, type: 3}

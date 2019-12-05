@@ -739,7 +739,8 @@ PrefabInstance:
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Henceforth you shall be known as king of goblin castle.
+      value: "Henceforth you shall travel the court of law known as GREG THE GOBLIN
+        EXTERMINATOR\u2122"
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}

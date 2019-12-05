@@ -568,6 +568,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9122955541595774eb86f5472f39a441, type: 3}
+--- !u!1 &523514970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4369308260255339653, guid: 6265fdfbc0cd6e840bbb7d4b34737d58,
+    type: 3}
+  m_PrefabInstance: {fileID: 7611066663202279727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &523514971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523514970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f816a5480934532bdb1261b32f5b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue12:
+    name: 
+    sentences: []
 --- !u!1 &694456064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6339772440274249755, guid: 8a0b43563d2ba2745aee5481174be5e9,
@@ -952,7 +973,7 @@ Transform:
   m_LocalScale: {x: 2.590487, y: 2.6581237, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1512096063
 PrefabInstance:
@@ -1947,6 +1968,53 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858051099590946468, guid: 4465ea10fe95f854594d47b2d144de5d,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: I WILL HAUNT YOUR CREDIT SCORE UNTIL THE END OF TIMEEEEEE
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858051099590946468, guid: 4465ea10fe95f854594d47b2d144de5d,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: OOGA BOOOGA BOOOGAAAAAA
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858051099590946468, guid: 4465ea10fe95f854594d47b2d144de5d,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: Haha the look on your face is priceless!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858051099590946468, guid: 4465ea10fe95f854594d47b2d144de5d,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: "I'm Spooky Bob. I'm the IRS agent that was sent here to audit those
+        tax evading goblins\u2122"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858051099590946468, guid: 4465ea10fe95f854594d47b2d144de5d,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: 'That was until they killed me '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858051099590946468, guid: 4465ea10fe95f854594d47b2d144de5d,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: And since they weren't making that much money the IRS probably hasn't
+        noticed me gone and now I just haunt this castle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858051099590946468, guid: 4465ea10fe95f854594d47b2d144de5d,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: I've been stuck in this room for ages.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858051099590946468, guid: 4465ea10fe95f854594d47b2d144de5d,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[7]
+      value: If you can clear out the rest of the goblins I can be freeeeeee!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858051099590946468, guid: 4465ea10fe95f854594d47b2d144de5d,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[8]
+      value: Listen I'll tell you how to resist their nega vibe checks
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4465ea10fe95f854594d47b2d144de5d, type: 3}

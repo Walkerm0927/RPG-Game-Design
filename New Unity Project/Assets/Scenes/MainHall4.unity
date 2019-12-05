@@ -1713,7 +1713,8 @@ PrefabInstance:
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: We can again host marvellous feasts in the dining room.
+      value: We can again host marvellous feasts in the dining room. AND CHARGE A
+        BIG PREMIUM
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
@@ -1733,12 +1734,13 @@ PrefabInstance:
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: and he smells TERRIBLE!
+      value: and he smells TERRIBLE! I haven't felt nega vibes like this anywhere
+        else. Be careful and remember...
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: Do away with him and I will be deeply in your debt good sir.
+      value: He is the key kill him and we will be free!
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
@@ -2215,7 +2217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1149530920, guid: 4e96fddd981397243983b597f8238518, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.440002
+      value: -14.439941
       objectReference: {fileID: 0}
     - target: {fileID: 1639075576, guid: 4e96fddd981397243983b597f8238518, type: 3}
       propertyPath: m_AnchoredPosition.x

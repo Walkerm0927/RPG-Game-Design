@@ -1708,32 +1708,32 @@ PrefabInstance:
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Oh... hey Spooky Bob.
+      value: And if we can clear out this goblin den we can rent it out!!!
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Since when are you dead?
+      value: ThAT MEANS WE CAN START MAKING MONEY
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: EEK! A GHOST!
+      value: Me and Spooky Bob were talking
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: Hey Greg, glad to see you didn't go the way of old Spooky Bob over there.
+      value: WE'LL BE RICH
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: Do you think you could clear out the main dining room for me?
+      value: Here's the key! GO GETTEM
       objectReference: {fileID: 0}
     - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
         type: 3}
@@ -1744,6 +1744,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.sentences.Array.data[6]
       value: Do you think you could clear out the main dining room for me?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661831470477002891, guid: e56a2531733fb0c44b888d639a8dc893,
+        type: 3}
+      propertyPath: dialogue.name
+      value: Countess Lily-Pudding
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e56a2531733fb0c44b888d639a8dc893, type: 3}
@@ -2215,7 +2220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1149530920, guid: 4e96fddd981397243983b597f8238518, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.440002
+      value: -14.439941
       objectReference: {fileID: 0}
     - target: {fileID: 1639075576, guid: 4e96fddd981397243983b597f8238518, type: 3}
       propertyPath: m_AnchoredPosition.x
