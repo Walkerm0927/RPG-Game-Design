@@ -6,6 +6,13 @@ TagManager:
   tags:
   - goblin
   - key
+  - npc1
+  - door
+  - boss_door
+  - room3_door
+  - room1_door
+  - room2_door
+  - phantom
   layers:
   - Default
   - TransparentFX
@@ -17,8 +24,8 @@ TagManager:
   - 
   - Background
   - Sprites
-  - 
-  - 
+  - NewUI
+  - Outermap
   - 
   - 
   - 
@@ -40,6 +47,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: outermap
+    uniqueID: 3295160299
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -51,4 +61,7 @@ TagManager:
     locked: 0
   - name: Sprites
     uniqueID: 2172000331
+    locked: 0
+  - name: UI
+    uniqueID: 1866449607
     locked: 0
