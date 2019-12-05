@@ -1245,7 +1245,7 @@ PrefabInstance:
     - target: {fileID: 8159672149786389055, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
         type: 3}
       propertyPath: m_Name
-      value: Soundtrack_room2
+      value: Soundtrack_room3
       objectReference: {fileID: 0}
     - target: {fileID: 8159672149786389049, guid: c988b7f9a1a8f8c4f8a10a96a28bb760,
         type: 3}
@@ -1321,7 +1321,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 362b9796320d6f943864549b23540b1b, type: 3}
+      objectReference: {fileID: 8300000, guid: b86f6a7e92f652c4f8123485593a7df1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c988b7f9a1a8f8c4f8a10a96a28bb760, type: 3}
 --- !u!1001 &1330220404
