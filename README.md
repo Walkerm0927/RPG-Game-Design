@@ -12,3 +12,5 @@ Code written by Philip Solimine<br />
 Original Artwork by Marion Walker and Alyssa Slaman<br />
 Dialogue and additional code by Gustavo Flores<br />
 Soundtrack by Michael McGregor<br />
+
+![Game Poster](https://img.itch.zone/aW1nLzI3NTE3MTUucG5n/original/HIpuKf.png)
