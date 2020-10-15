@@ -1,3 +1,13 @@
-# Greg - professional goblin exterminator
+# Greg - Professional Goblin Exterminator
 
-This is the game of group 5 for game design class
+Play as Greg in this exciting new role-playing-game. Rescue the Countess Lilypudding by freeing her castle of smelly, tax-evading goblin squatters.
+Can you earn the title of Professional Goblin Exterminator?
+
+Play now at: https://psol.itch.io/greg
+
+
+Credits:
+Code written by Philip Solimine
+Original Artwork by Marion Walker and Alyssa Slaman
+Dialogue and additional code by Gustavo Flores
+Soundtrack by Michael McGregor
